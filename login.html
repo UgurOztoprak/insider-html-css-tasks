@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+</head>
+
+<body>
+    <div>
+        <h1>Giriş Yap</h1>
+        <form action="/submit">
+            <label for="email">E-posta:</label><br>
+            <input type="email" id="email" name="kullanici_email" placeholder="E-postanızı giriniz." required>
+            <br><br>
+
+            <label for="password">Şifre:</label><br>
+            <input type="password" id="password" name="kullanici_sifre" placeholder="Şifrenizi giriniz." required>
+            <br><br>
+
+            <input type="checkbox" id="remember" name="beni_hatirla">
+            <label for="remember">Beni Hatırla</label>
+            <br><br>
+
+            <button type="submit">Gönder</button>
+        </form>
+        <p>Hesabın yok mu? <a href="/signup.html">Hemen Kayıt Ol</a></p>
+    </div>
+</body>
+
+</html>
