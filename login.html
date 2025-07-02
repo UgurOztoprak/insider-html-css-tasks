@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giriş Yap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div>
+    <div class="container">
         <h1>Giriş Yap</h1>
-        <form action="/submit">
-            <label for="email">E-posta:</label><br>
-            <input type="email" id="email" name="kullanici_email" placeholder="E-postanızı giriniz." required>
-            <br><br>
-
-            <label for="password">Şifre:</label><br>
-            <input type="password" id="password" name="kullanici_sifre" placeholder="Şifrenizi giriniz." required>
-            <br><br>
-
-            <input type="checkbox" id="remember" name="beni_hatirla">
-            <label for="remember">Beni Hatırla</label>
-            <br><br>
-
-            <button type="submit">Gönder</button>
-        </form>
+        <div class="form-container">
+            <form action="/submit">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="kullanici_email" placeholder="E-postanızı giriniz." required>
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="kullanici_sifre" placeholder="Şifrenizi giriniz." required>
+                <div class="checkbox">
+                    <input type="checkbox" id="remember" name="beni_hatirla">
+                    <label for="remember">Beni Hatırla</label>
+                </div>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
         <p>Hesabın yok mu? <a href="/signup.html">Hemen Kayıt Ol</a></p>
     </div>
 </body>
-
 </html>
