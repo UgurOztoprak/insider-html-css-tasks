@@ -4,12 +4,13 @@
 }
 body {
     font-family: 'Cinzel', serif;
+    width: 100%;
 }
 body::before {
     content: '';
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     filter: brightness(0.65);
     background-image: url("https://preview.redd.it/wvt66z80vtu21.jpg?auto=webp&s=7d1636c5fe74f78bdc76dbb12729a23d21a2715e");
@@ -131,7 +132,7 @@ header {
 .cardsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 70px;
+    gap: 20px;
     place-items: center;
     margin-bottom: 150px;
 }
@@ -180,7 +181,7 @@ header {
 .episodes .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 70px;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto 100px auto;
     justify-content: center;
@@ -193,15 +194,10 @@ header {
     background-color: #ffffff1f;
     backdrop-filter: blur(4px);
     border-radius: 16px;
-    padding: 10px;
     box-shadow: 0 4px 20px #00000030;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 350px;
+    width: 100%;
     height: 180px;
-}
-.episodeCards:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px #00000055;
 }
 .episodeCards img {
     width: 100%;
