@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1d;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #dcdcdc;
+}
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.123);
+    color: #f0f0f0;
+    backdrop-filter: blur(6px);
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+    padding: 10px 24px;
+    font-size: 1rem;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+.startBtn {
+    background: #00796b;
+    color: white;
+}
+.startBtn:hover {
+    background: #00695c;
+    transform: scale(1.05);
+}
+.resetBtn {
+    background: #c62828;
+    color: white;
+}
+.resetBtn:hover {
+    background: #b71c1c;
+    transform: scale(1.05);
+}
+.countdownP {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #fafafa;
+}
