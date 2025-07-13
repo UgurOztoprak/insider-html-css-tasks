@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 60px 20px;
+    min-height: 100vh;
+    color: #ddd;
+}
+.container {
+    background: #2e2e2e;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+    width: 100%;
+    max-width: 560px;
+    border-left: 6px solid #ff6b6b;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #ddd;
+    font-size: 24px;
+}
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.input-section input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #454545;
+    color: #ddd;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+}
+.input-section input::placeholder {
+    color: #999;
+}
+.input-section input:focus {
+    border-color: #aaa;
+    outline: none;
+}
+.input-section button {
+    padding: 12px 16px;
+    border: none;
+    background-color: #666;
+    color: #eee;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.input-section button:hover {
+    background-color: #555;
+}
+.delete-btn {
+    background-color: transparent;
+    color: #ff4d4d;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+.delete-btn:hover {
+    color: #ff0000;
+}
+.task-list li {
+    display: flex;
+    align-items: center;
+    background: #454545;
+    border: 1px solid #555;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    position: relative;
+    color: #ddd;
+}
+.task-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2.5px solid #ff6b6b;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+.task-checkbox:checked {
+    background-color: #90f8a1;
+    border-color: #90f8a1;
+}
+.task-checkbox:checked::after {
+    content: '✓';
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: -3px;
+    left: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.task-text {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ddd;
+    user-select: none;
+}
+.priority-option {
+    display: flex;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+.priority-option input[type="radio"] {
+    display: none;
+}
+.priority-option .custom-shape {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.priority-option.low .custom-shape {
+    background-color: #7f8c8d;
+    border: 2px solid #7f8c8d;
+}
+.priority-option.medium .custom-shape {
+    background-color: #f1c40f;
+    border: 2px solid #f1c40f;
+}
+.priority-option.high .custom-shape {
+    background-color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+.priority-option input[type="radio"]:checked+.custom-shape {
+    background-color: #00f7ff;
+    box-shadow: 0 0 8px #00f7ffaa;
+    border-color: #00bcd4;
+}
+.task-priority-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.filter-sort-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 12px;
+}
+.filter-sort-controls button,
+.filter-sort-controls select {
+    padding: 10px 14px;
+    background-color: #666;
+    color: #eee;
+    border: 1px solid #555;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.filter-sort-controls button:hover,
+.filter-sort-controls select:hover {
+    background-color: #555;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+.filter-sort-controls select {
+    background-color: #444;
+    appearance: none;
+}
+.custom-dropdown {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.custom-dropdown .selected {
+    background-color: #454545;
+    border: 1px solid #666;
+    color: #ddd;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-dropdown .options {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    background: #2e2e2e;
+    border: 1px solid #555;
+    border-radius: 10px;
+    max-height: 170px;
+    box-shadow: 0 0 10px #0008;
+    display: none;
+    z-index: 10;
+    color: #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-dropdown .option {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.custom-dropdown .option:hover {
+    background-color: #555;
+    color: #fff;
+}
+.custom-dropdown.open .options {
+    display: block;
+}
+.custom-dropdown .arrow {
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ddd;
+}
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #7ee782;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.submit-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List with Priority</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>📝 To-Do List</h1>
+        <form id="todoForm" action="" method="POST">
+            <div class="input-section">
+                <input type="text" placeholder="Enter a new task..." id="taskInput" name="taskInput" />
+                <div class="priority-section">
+                    <label class="priority-option low">
+                        <input type="radio" name="priority" value="Low" />
+                        <span class="custom-shape"></span>Low</label>
+                    <label class="priority-option medium">
+                        <input type="radio" name="priority" value="Medium" />
+                        <span class="custom-shape"></span>Medium</label>
+                    <label class="priority-option high">
+                        <input type="radio" name="priority" value="High" />
+                        <span class="custom-shape"></span>High</label>
+                </div>
+                <button id="addTaskBtn" type="button">Add</button>
+            </div>
+            <div class="filter-sort-controls">
+                <div class="custom-dropdown" id="filterDropdown">
+                    <div class="selected" data-value="all">All tasks <div class="arrow"></div></div>
+                    <div class="options">
+                        <div class="option" data-value="all">All tasks</div>
+                        <div class="option" data-value="completed">Completed</div>
+                        <div class="option" data-value="incomplete">Incomplete</div>
+                    </div>
+                </div>
+                <div class="custom-dropdown" id="sortDropdown">
+                    <div class="selected" data-value="default">Sort by priority <div class="arrow"></div></div>
+                    <div class="options">
+                        <div class="option" data-value="default">Sort by priority</div>
+                        <div class="option" data-value="high-low">Highest priority first</div>
+                        <div class="option" data-value="low-high">Lowest priority first</div>
+                    </div>
+                </div>
+            </div>
+            <ul class="task-list" id="taskList"></ul>
+            <div>
+                <button class="submit-button" type="submit" id="submitFormBtn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
