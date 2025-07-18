@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+h2 {
+    color: #333;
+}
+button#getir {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+button#getir:hover {
+    background-color: #2563eb;
+}
+#kullanicilar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.kart {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.kart:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+.kart img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #e5e7eb;
+}
+.kart h4 {
+    margin: 10px 0 5px;
+    color: #1f2937;
+}
+.kart p {
+    margin: 4px 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+.slider {
+    max-width: 800px;
+    margin: 40px auto;
+}
+.slider .item {
+    padding: 10px;
+    text-align: center;
+}
+.slider .item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #3b82f6;
+}
+.slider .item p {
+    font-weight: bold;
+    color: #2563eb;
+}
+[id^="detay-"] {
+    display: none;
+}
